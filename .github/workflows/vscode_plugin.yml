@@ -1,6 +1,7 @@
 name: VS Code Plugin
 
 on:
+  workflow_dispatch:
   push:
     branches: ["master"]
     tags: ["v*"]
