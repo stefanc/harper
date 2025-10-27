@@ -108,6 +108,7 @@ impl CommentParser {
             "ts" => "typescript",
             "tsx" => "typescriptreact",
             "clj" | "cljc" | "cljd" | "cljs" | "bb" => "clojure",
+            "adoc" | "asciidoc" => "asciidoc",
             _ => return None,
         })
     }
