@@ -12,6 +12,7 @@ use crate::ignored_lints_io::{load_ignored_lints, save_ignored_lints};
 use crate::io_utils::fileify_path;
 use anyhow::{Context, Result, anyhow};
 use futures::future::join;
+use harper_asciidoc::AsciiDocParser;
 use harper_comments::CommentParser;
 use harper_core::linting::{LintGroup, LintGroupConfig};
 use harper_core::parsers::{
@@ -24,7 +25,6 @@ use harper_ink::InkParser;
 use harper_jjdescription::JJDescriptionParser;
 use harper_literate_haskell::LiterateHaskellParser;
 use harper_python::PythonParser;
-use harper_asciidoc::AsciiDocParser;
 use harper_stats::{Record, Stats};
 use harper_typst::Typst;
 use serde_json::Value;
