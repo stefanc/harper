@@ -2418,6 +2418,7 @@ dependencies = [
  "dirs 6.0.0",
  "futures",
  "globset",
+ "harper-asciidoc",
  "harper-comments",
  "harper-core",
  "harper-html",

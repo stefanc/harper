@@ -24,6 +24,7 @@ use harper_ink::InkParser;
 use harper_jjdescription::JJDescriptionParser;
 use harper_literate_haskell::LiterateHaskellParser;
 use harper_python::PythonParser;
+use harper_asciidoc::AsciiDocParser;
 use harper_stats::{Record, Stats};
 use harper_typst::Typst;
 use serde_json::Value;
@@ -392,6 +393,7 @@ impl Backend {
             "typst" => Some(Box::new(Typst)),
             "org" => Some(Box::new(OrgMode)),
             "python" => Some(Box::new(PythonParser::default())),
+            "asciidoc" | "adoc" => Some(Box::new(AsciiDocParser::default())),
             _ => None,
         };
 
