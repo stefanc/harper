@@ -1,7 +1,6 @@
 name: Just Checks
 
 on:
-  workflow_dispatch:
   push:
     branches: ["master", "web-prod"]
   pull_request:

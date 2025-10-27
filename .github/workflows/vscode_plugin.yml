@@ -1,7 +1,6 @@
 name: VS Code Plugin
 
 on:
-  workflow_dispatch:
   push:
     branches: ["master"]
     tags: ["v*"]
@@ -64,12 +63,6 @@ jobs:
 
           just package-vscode ${{ matrix.platform.code_target }}
           echo artifact=$(echo packages/vscode-plugin/*.vsix) >> $GITHUB_OUTPUT
-      - name: Upload VSIX artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: harper-vscode-${{ matrix.platform.code_target }}
-          path: ${{ steps.package_extension.outputs.artifact }}
-          retention-days: 30
       - name: Release artifacts
         if: startsWith(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
