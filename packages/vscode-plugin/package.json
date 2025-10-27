@@ -60,6 +60,7 @@
 		"onLanguage:typescript",
 		"onLanguage:typescriptreact",
 		"onLanguage:typst",
+		"onLanguage:zig",
 		"onLanguage:clojure"
 	],
 	"main": "./build/extension.js",
